@@ -45,8 +45,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'OptionButtons',
   data: () => ({
@@ -56,28 +54,17 @@ export default {
     corte2: [1, 2, 3, 4, 5, 6]
   }),
   methods: {
-    sendInfo () {
-      const FormData = require('form-data')
-      const data = new FormData()
-      data.append('algoritmo1', '0')
-      data.append('algoritmo2', '1')
-      data.append('corte', '1')
-      data.append('corte2', '1')
-
-      const config = {
-        method: 'post',
-        url: 'http://localhost:5000',
-        headers: data.getHeaders ? data.getHeaders() : { 'Content-Type': 'multipart/form-data' },
-        data
-      }
-
-      axios(config)
-        .then(function (response) {
-          console.log(JSON.stringify(response.data))
-        })
-        .catch(function (error) {
-          console.log(error)
-        })
+    async sendInfo () {
+      const result = await this.$axios.$post('http://localhost:5000', {
+        algoritmo1: 0,
+        algoritmo2: 1,
+        corte: 1,
+        corte2: 1
+      }, {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      })
+      console.log(result)
+      return { result }
     }
   }
 }
