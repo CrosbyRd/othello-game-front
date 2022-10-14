@@ -1,5 +1,11 @@
 # othello-game-front
 
+## Integrantes
+Martin Aponte
+Eric Ruiz Diaz
+Elias Caceres
+Ever Garay
+
 ## Build Setup
 
 ```bash
