@@ -1,38 +1,38 @@
 <template>
   <div>
-    <v-row
-      align="center"
-      justify="space-around"
-      class="ma-1"
-    >
-      <v-btn
-        depressed
-        color="primary"
-      >
-        Boton para volver
-      </v-btn>
+<!--    <v-row-->
+<!--      align="center"-->
+<!--      justify="space-around"-->
+<!--      class="ma-1"-->
+<!--    >-->
+<!--      <v-btn-->
+<!--        depressed-->
+<!--        color="primary"-->
+<!--      >-->
+<!--        Boton para volver-->
+<!--      </v-btn>-->
 
-      <v-menu offset-y>
-        <template #activator="{ on, attrs }">
-          <v-btn
-            color="primary"
-            dark
-            v-bind="attrs"
-            v-on="on"
-          >
-           Enseñar a IA
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-row>
+<!--      <v-menu offset-y>-->
+<!--        <template #activator="{ on, attrs }">-->
+<!--          <v-btn-->
+<!--            color="primary"-->
+<!--            dark-->
+<!--            v-bind="attrs"-->
+<!--            v-on="on"-->
+<!--          >-->
+<!--           Enseñar a IA-->
+<!--          </v-btn>-->
+<!--        </template>-->
+<!--        <v-list>-->
+<!--          <v-list-item-->
+<!--            v-for="(item, index) in items"-->
+<!--            :key="index"-->
+<!--          >-->
+<!--            <v-list-item-title>{{ item.title }}</v-list-item-title>-->
+<!--          </v-list-item>-->
+<!--        </v-list>-->
+<!--      </v-menu>-->
+<!--    </v-row>-->
     <div class="game-container">
       <div class="score-container">
         <div class="score-board">
